@@ -1,0 +1,8 @@
+name = "StippleDesktop"
+uuid = "9f7d7724-8aac-43e9-8436-351a9c9f8810"
+authors = ["PGimenez <gimenezfebrer@gmail.com>"]
+version = "0.1.0"
+
+[deps]
+GenieFramework = "a59fdf5c-6bf0-4f5d-949c-a137c9e2f353"
+NodeJS = "2bd173c7-0d6d-553b-b6af-13a54713934c"
