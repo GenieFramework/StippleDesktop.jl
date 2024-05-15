@@ -1,18 +1,22 @@
 const { app, BrowserWindow, shell } = require('electron');
 const http = require('http');
+const path = require('path');
 
 const port = process.argv[2] || '8000';
+const windowWidth = parseInt(process.argv[3], 10) || 900;
+const windowHeight = parseInt(process.argv[4], 10) || 900;
 
 let mainWindow;
 
 function createWindow() {
     console.log(`Creating main window and loading from port ${port}...`);
     mainWindow = new BrowserWindow({
-        width: 800,
-        height: 600,
+        width: windowWidth,
+        height: windowHeight,
         webPreferences: {
             nodeIntegration: true
-        }
+        },
+        icon: path.join(__dirname, 'genie-logo.png') // Path to your icon file
     });
 
     mainWindow.webContents.on('new-window', function(event, url) {
